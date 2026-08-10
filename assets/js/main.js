@@ -14,11 +14,24 @@
   if(close) close.addEventListener('click',closeModal);
   if(backdrop) backdrop.addEventListener('click',e=>{if(e.target===backdrop) closeModal();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal();});
-  const links={whatsapp:cfg.whatsapp,instagram:cfg.instagram,linkedin:cfg.linkedin,email:cfg.email,github:cfg.github};
+  const links={whatsapp:cfg.whatsapp,instagram:cfg.instagram};
   Object.entries(links).forEach(([k,v])=>{
     document.querySelectorAll(`[data-connect-link="${k}"]`).forEach(a=>{
-      if(v){a.href=v;if(!v.startsWith('mailto:')){a.target='_blank';a.rel='noopener noreferrer';}}
-      else{a.remove();}
+      if(v){
+        a.href=v;
+        a.classList.remove('connect-unavailable');
+        a.removeAttribute('aria-disabled');
+        a.target='_blank';
+        a.rel='noopener noreferrer';
+      }else{
+        a.href='#';
+        a.classList.add('connect-unavailable');
+        a.setAttribute('aria-disabled','true');
+        a.addEventListener('click',e=>{
+          e.preventDefault();
+          alert('Instagram link is being updated. Please connect with me on WhatsApp for now.');
+        });
+      }
     });
   });
   document.querySelectorAll('[data-project-key]').forEach(a=>{
