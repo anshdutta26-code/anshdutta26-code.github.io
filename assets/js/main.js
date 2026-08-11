@@ -40,3 +40,5 @@
     else{a.href='#';a.classList.add('pending');a.addEventListener('click',e=>{e.preventDefault();alert('Case study link will be added before final launch.');});}
   });
 })();
+
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".protected-media").forEach(img=>{img.setAttribute("draggable","false");img.addEventListener("dragstart",e=>e.preventDefault());img.addEventListener("contextmenu",e=>e.preventDefault());});});

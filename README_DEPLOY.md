@@ -1,13 +1,33 @@
-# Ansh Dutta Portfolio — Deployment
+# Ansh Dutta Portfolio — FINAL MASTER
 
-## Ready-to-upload structure
-Upload the CONTENTS of this folder to the `website-build` branch of `anshdutta26-code.github.io`.
+This is the final consolidated website package.
 
-## Before final merge
-1. Add Instagram URL in `assets/js/config.js` if desired.
-2. Add the six Google Drive project links in `assets/js/config.js`.
-3. Test all pages on a preview/server.
-4. Merge `website-build` into `main`. GitHub Pages will redeploy automatically.
+All requested website changes are already included:
+- subtle PDF-style typography
+- final About page with BBA Gold Medalist in 1st Year
+- corrected Insights / Beyond the Brief section
+- polished Projects page and centered Google Drive CTA buttons
+- refined Work Experience layout with company logos aligned to the right
+- FitwithMehar proof screenshots
+- Mehar Bedi in Testimonials as Founder / FitwithMehar
+- Hire Me CTAs routing to Contact
+- Home secondary CTA routing to LinkedIn
+- final Contact page with AD holographic artwork from the portfolio PDF
+- Instagram and WhatsApp contact details configured
+- responsive desktop / tablet / mobile layouts
+- image hover enlargement and right-click / drag deterrence
+- custom domain / favicon / sitemap / robots / 404 support
 
-## Custom domain
-`CNAME` is already set to `anshdutta.com`. Do not change GoDaddy DNS again.
+ONLY ONE THING REMAINS:
+Add the six final Google Drive case-study URLs in:
+assets/js/config.js
+
+Project-link keys:
+1. orderWarehouse
+2. fundraising
+3. ontario
+4. salesAllowance
+5. infinityFlex
+6. xboxPlaystation
+
+Do not redesign or edit any other website file unless required.
