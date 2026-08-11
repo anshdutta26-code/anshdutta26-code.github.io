@@ -24,4 +24,22 @@
     img.addEventListener('dragstart', e => e.preventDefault());
     img.addEventListener('contextmenu', e => e.preventDefault());
   });
+
+  // Footer "Let's Connect" menu. It exists on every page except Contact.
+  const connectTrigger = document.querySelector('.connect-trigger');
+  const connectPopover = document.querySelector('.connect-popover');
+  if (connectTrigger && connectPopover) {
+    const setConnectOpen = (open) => {
+      connectPopover.classList.toggle('is-open', open);
+      connectPopover.setAttribute('aria-hidden', String(!open));
+      connectTrigger.setAttribute('aria-expanded', String(open));
+    };
+    connectTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setConnectOpen(!connectPopover.classList.contains('is-open'));
+    });
+    connectPopover.addEventListener('click', e => e.stopPropagation());
+    document.addEventListener('click', () => setConnectOpen(false));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setConnectOpen(false); });
+  }
 })();

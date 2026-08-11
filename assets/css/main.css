@@ -957,3 +957,167 @@
   .work-logo-tile,.compact-card .work-logo-tile{width:90px!important;height:70px!important;padding:6px!important;border-radius:12px!important;}
   .contact-art-bg{min-height:240px!important;}
 }
+
+
+/* ===== FINAL9: Footer connect popover + full mobile/tablet hardening ===== */
+html,body{max-width:100%;overflow-x:hidden}
+.page-width,.header-inner,.project-card,.project-top,.project-copy,.panel,.company-copy,.company-media,.detail-split>*{min-width:0}
+
+/* Footer: Mail + Let's Connect on all pages except Contact. */
+.footer-actions{position:relative;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.footer-actions .btn{white-space:nowrap}
+.connect-trigger{border:0}
+.connect-popover{
+  position:absolute;
+  right:0;
+  bottom:calc(100% + 12px);
+  width:min(320px,calc(100vw - 36px));
+  padding:10px;
+  border:1px solid #285d91;
+  border-radius:16px;
+  background:rgba(6,19,39,.98);
+  box-shadow:0 22px 70px rgba(0,0,0,.48);
+  backdrop-filter:blur(16px);
+  opacity:0;
+  transform:translateY(8px) scale(.985);
+  pointer-events:none;
+  visibility:hidden;
+  z-index:180;
+  transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+}
+.connect-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;visibility:visible}
+.connect-popover>a{
+  min-height:64px;
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr) auto;
+  gap:12px;
+  align-items:center;
+  padding:10px 12px;
+  border-radius:11px;
+  color:#eef6ff;
+}
+.connect-popover>a:hover{background:#0a213a}
+.connect-popover b,.connect-popover small{display:block}
+.connect-popover b{font-size:12px;line-height:1.2}
+.connect-popover small{margin-top:3px;color:#8498b3;font-size:10px;line-height:1.25}
+.connect-icon{width:36px;height:36px;border:1px solid #2a6ba7;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#42bdff;font-size:10px;font-weight:900;letter-spacing:.02em}
+
+/* Project cards: never crop the text embedded in the project artwork. */
+.project-card{width:100%;overflow:hidden}
+.project-top{grid-template-columns:minmax(130px,155px) minmax(0,1fr)}
+.project-image{overflow:hidden!important;background:#050f1d}
+.project-image img{object-fit:contain!important;object-position:center!important;transform:none!important}
+.project-copy span,.project-copy h3,.project-copy p{max-width:100%;overflow-wrap:anywhere;word-break:normal}
+.project-copy h3{hyphens:auto}
+.project-drive-btn{width:100%;max-width:100%;white-space:normal;line-height:1.25;padding:10px 14px;min-height:50px;height:auto}
+
+/* General responsive text safety. */
+.page-intro h1,.contact-left h1,.not-found h1,.company-copy h1,.section-heading h2,.footer-cta h2,.home-copy h1{
+  max-width:100%;overflow-wrap:break-word;word-break:normal
+}
+.mini-stat,.info-card,.impact-grid .panel,.role-panel,.work-card,.testimonial-card,.insight-card{overflow:hidden}
+.mini-stat strong,.work-card h3,.impact-grid li,.role-panel b,.contact-detail-copy b{overflow-wrap:anywhere}
+
+/* Tablet: preserve comfortable spacing without fixed-width overflow. */
+@media(max-width:1024px){
+  .page-width{width:calc(100% - 40px)}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px!important}
+  .project-card{padding:18px!important;min-height:0!important}
+  .project-top{grid-template-columns:140px minmax(0,1fr)!important;gap:16px!important}
+  .project-image{width:100%;height:auto!important;aspect-ratio:1/1!important}
+  .project-copy h3{font-size:clamp(16px,2.15vw,19px)!important}
+  .company-hero,.detail-split,.two-col-intro{min-width:0}
+  .footer-cta{gap:20px}
+}
+
+@media(max-width:900px){
+  .page-width{width:calc(100% - 32px)!important}
+  .project-grid{grid-template-columns:1fr!important;gap:18px!important}
+  .project-card{padding:18px!important;border-radius:24px!important}
+  .project-top{grid-template-columns:190px minmax(0,1fr)!important;gap:18px!important;align-items:center!important}
+  .project-image{height:auto!important;aspect-ratio:1/1!important}
+  .project-copy h3{font-size:19px!important;line-height:1.16!important;margin:8px 0 10px!important}
+  .project-copy p{font-size:12.5px!important;line-height:1.5!important}
+  .project-drive-btn{margin-top:18px!important;font-size:11px!important}
+  .footer-cta{align-items:flex-start!important}
+  .footer-actions{width:100%;justify-content:flex-start}
+  .connect-popover{left:0;right:auto}
+  .contact-details,.contact-detail,.contact-detail-copy{min-width:0}
+  .contact-detail-copy b,.contact-detail-copy a{max-width:100%;overflow-wrap:anywhere}
+}
+
+@media(max-width:700px){
+  :root{--header:66px}
+  body{font-size:13px}
+  .page-width{width:calc(100% - 24px)!important}
+  .header-inner{width:calc(100% - 22px)!important}
+  .page-intro{padding-top:26px!important;padding-bottom:42px!important}
+  .page-intro h1,.contact-left h1,.not-found h1{font-size:clamp(34px,10.2vw,48px)!important;line-height:1.02!important;letter-spacing:-.035em!important}
+  .page-sub{font-size:13px!important;line-height:1.45!important}
+  .eyebrow{font-size:10.5px!important;line-height:1.3!important}
+
+  /* Project mobile cards: image shown in full and all copy remains inside the card. */
+  .project-grid{margin-top:28px!important;gap:16px!important}
+  .project-card{padding:14px!important;min-height:0!important;border-radius:22px!important}
+  .project-top{display:flex!important;flex-direction:column!important;gap:16px!important;align-items:stretch!important}
+  .project-image{width:100%!important;height:auto!important;aspect-ratio:1/1!important;border-radius:15px!important}
+  .project-image img{width:100%!important;height:100%!important;object-fit:contain!important}
+  .project-copy{padding:0 4px!important}
+  .project-copy span{font-size:10px!important;line-height:1.25!important}
+  .project-copy h3{font-size:clamp(21px,6.8vw,29px)!important;line-height:1.12!important;margin:10px 0 14px!important;letter-spacing:-.02em!important}
+  .project-copy p{font-size:15px!important;line-height:1.55!important;color:#a1adbd!important}
+  .project-drive-btn{margin-top:18px!important;min-height:58px!important;font-size:12px!important;padding:12px 10px!important;border-radius:12px!important}
+
+  /* Protect all cards/stat numbers/headings from narrow-screen clipping. */
+  .stat-row,.home-info,.impact-grid,.service-pill-grid,.bullet-cols,.fit-insights,.inverse-proof-grid{grid-template-columns:1fr!important}
+  .mini-stat{width:100%;min-width:0!important;height:auto!important;min-height:78px!important}
+  .mini-stat strong{font-size:22px!important;line-height:1.05!important}
+  .impact-grid .panel,.role-panel,.who-card,.education-panel,.expertise-card,.tools-panel{min-width:0!important;width:100%!important}
+  .impact-grid li,.cert-col li,.expertise-card li{padding-right:2px!important;overflow-wrap:anywhere!important}
+  .company-copy h1{font-size:clamp(34px,10vw,48px)!important;line-height:1.04!important;overflow-wrap:anywhere!important}
+  .section-heading h2{font-size:clamp(27px,8vw,38px)!important;line-height:1.08!important}
+  .work-card,.work-card.compact-card{width:100%!important;min-width:0!important}
+  .work-card-copy{min-width:0!important}
+  .work-card h3,.work-card p,.work-card small{overflow-wrap:anywhere!important}
+  .testimonial-card blockquote{overflow-wrap:break-word!important}
+  .contact-shell{width:100%!important;overflow:hidden!important}
+
+  /* Footer is deliberately compact on mobile. */
+  .footer-wrap{padding-top:20px!important}
+  .footer-cta{padding:20px!important;border-radius:20px!important;gap:18px!important;width:100%!important}
+  .footer-cta h2{font-size:clamp(20px,6vw,26px)!important;line-height:1.16!important}
+  .footer-cta p{line-height:1.45!important}
+  .footer-actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;width:100%!important}
+  .footer-actions .btn{width:100%!important;min-width:0!important;padding:0 12px!important}
+  .connect-popover{left:0!important;right:0!important;width:100%!important;bottom:calc(100% + 10px)!important}
+  .footer-bottom{gap:16px!important;padding-top:22px!important}
+  .footer-bottom>div{gap:14px!important}
+}
+
+@media(max-width:430px){
+  .page-width{width:calc(100% - 20px)!important}
+  .brand-link{width:48px!important;min-width:48px!important}
+  .menu-btn{width:48px!important;height:46px!important}
+  .project-card{padding:12px!important}
+  .project-copy h3{font-size:clamp(20px,7.3vw,27px)!important}
+  .project-copy p{font-size:14px!important}
+  .project-drive-btn{font-size:11px!important;letter-spacing:.01em!important}
+  .footer-actions{grid-template-columns:1fr!important}
+  .connect-popover{bottom:calc(100% + 8px)!important}
+  .contact-detail{grid-template-columns:42px minmax(0,1fr)!important}
+  .contact-icon{width:38px!important;height:38px!important}
+  .contact-art-bg{min-height:210px!important}
+}
+
+@media(max-width:360px){
+  .page-width{width:calc(100% - 16px)!important}
+  .project-copy h3{font-size:20px!important}
+  .project-copy p{font-size:13.5px!important}
+  .project-drive-btn{font-size:10.5px!important}
+  .footer-cta{padding:16px!important}
+  .footer-cta h2{font-size:20px!important}
+}
+
+@media(hover:none){
+  .zoomable:hover,.project-image img:hover{transform:none!important;filter:none!important;box-shadow:none!important}
+}
