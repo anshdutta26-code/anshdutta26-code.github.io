@@ -1,44 +1,27 @@
 (() => {
-  const cfg = window.PORTFOLIO_CONFIG || {};
-  const menuBtn = document.querySelector('.menu-btn');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  if(menuBtn && mobileMenu){
-    menuBtn.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
-    mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
-  }
-  const backdrop = document.querySelector('.modal-backdrop');
-  const close = document.querySelector('.close-modal');
-  function openModal(){ if(backdrop){backdrop.classList.add('open');document.body.style.overflow='hidden';} }
-  function closeModal(){ if(backdrop){backdrop.classList.remove('open');document.body.style.overflow='';} }
-  document.querySelectorAll('[data-connect]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();openModal();}));
-  if(close) close.addEventListener('click',closeModal);
-  if(backdrop) backdrop.addEventListener('click',e=>{if(e.target===backdrop) closeModal();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal();});
-  const links={whatsapp:cfg.whatsapp,instagram:cfg.instagram};
-  Object.entries(links).forEach(([k,v])=>{
-    document.querySelectorAll(`[data-connect-link="${k}"]`).forEach(a=>{
-      if(v){
-        a.href=v;
-        a.classList.remove('connect-unavailable');
-        a.removeAttribute('aria-disabled');
-        a.target='_blank';
-        a.rel='noopener noreferrer';
-      }else{
-        a.href='#';
-        a.classList.add('connect-unavailable');
-        a.setAttribute('aria-disabled','true');
-        a.addEventListener('click',e=>{
-          e.preventDefault();
-          alert('Instagram link is being updated. Please connect with me on WhatsApp for now.');
-        });
-      }
+  const body = document.body;
+  const btn = document.querySelector('.menu-btn');
+  const menu = document.querySelector('.mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      const open = body.classList.toggle('menu-open');
+      btn.setAttribute('aria-expanded', String(open));
     });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => body.classList.remove('menu-open')));
+  }
+
+  const toast = document.querySelector('.toast');
+  function showToast(msg){ if(!toast) return; toast.textContent = msg; toast.classList.add('show'); clearTimeout(window.__toastT); window.__toastT=setTimeout(()=>toast.classList.remove('show'),2200); }
+  const links = (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.projectLinks) || {};
+  document.querySelectorAll('[data-project]').forEach(a => {
+    const key = a.dataset.project;
+    if (links[key]) a.href = links[key];
+    else a.addEventListener('click', e => { e.preventDefault(); showToast('Case study link is being added.'); });
   });
-  document.querySelectorAll('[data-project-key]').forEach(a=>{
-    const key=a.getAttribute('data-project-key');const url=cfg.projectLinks && cfg.projectLinks[key];
-    if(url){a.href=url;a.target='_blank';a.rel='noopener noreferrer';}
-    else{a.href='#';a.classList.add('pending');a.addEventListener('click',e=>{e.preventDefault();alert('Case study link will be added before final launch.');});}
+
+  document.querySelectorAll('.protected-media').forEach(img => {
+    img.draggable = false;
+    img.addEventListener('dragstart', e => e.preventDefault());
+    img.addEventListener('contextmenu', e => e.preventDefault());
   });
 })();
-
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".protected-media").forEach(img=>{img.setAttribute("draggable","false");img.addEventListener("dragstart",e=>e.preventDefault());img.addEventListener("contextmenu",e=>e.preventDefault());});});
