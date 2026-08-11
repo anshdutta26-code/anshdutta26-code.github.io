@@ -1,0 +1,27 @@
+{
+  "project_links_hardcoded": {
+    "orderWarehouse": "https://docs.google.com/document/d/1VuwqWYTQG_592wBHbKwq0HmfYfjX5AyC/preview",
+    "fundraising": "https://docs.google.com/document/d/1OMAsaB850PBwP7sPCvTn8zEuuXMrJyV5/preview",
+    "ontario": "https://docs.google.com/document/d/15R4ENCu6ASdX9qjv-9WEgIOMfO46WNNj/preview",
+    "salesAllowance": "https://docs.google.com/document/d/12OL1rkm4-9iU1H-sKG5HrmcDmmkrUQ8r/preview",
+    "infinityFlex": "https://docs.google.com/document/d/1bi4N9sX5fDvvalCqu9h_S0ZFWbegWZmw/preview",
+    "xboxPlaystation": "https://docs.google.com/document/d/1_0qivU7jjC6TWz6ab5xJh3GzBojKbumR/preview"
+  },
+  "all_project_links_use_preview": true,
+  "config_preview_count": 6,
+  "work_overview_uses_standard_white_logo_files": true,
+  "individual_job_company_logo_occurrences": {
+    "swiss-military": 0,
+    "fitwithmehar": 0,
+    "agm-advantage": 0,
+    "inverse-trends": 0,
+    "the-printing-shop": 0
+  },
+  "contact_borderless_blend_css": true,
+  "contact_ad_logo_uhd_dimensions": [
+    3840,
+    2560
+  ],
+  "missing_internal_references": [],
+  "html_files_checked": 14
+}

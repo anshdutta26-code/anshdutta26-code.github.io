@@ -1,0 +1,29 @@
+{
+  "job_page_logos_removed": {
+    "swiss-military": 1,
+    "fitwithmehar": 1,
+    "agm-advantage": 1,
+    "inverse-trends": 1,
+    "the-printing-shop": 0
+  },
+  "remaining_job_company_logos": {
+    "swiss-military": 0,
+    "fitwithmehar": 0,
+    "agm-advantage": 0,
+    "inverse-trends": 0,
+    "the-printing-shop": 0
+  },
+  "work_logo_sources": [
+    "/assets/images/work-logo-swiss-military.png",
+    "/assets/images/work-logo-fitwithmehar.png",
+    "/assets/images/work-logo-agm-advantage.png",
+    "/assets/images/work-logo-inverse-trends.png",
+    "/assets/images/work-logo-printing-shop.png"
+  ],
+  "contact_uhd_dimensions": [
+    3840,
+    2560
+  ],
+  "missing_internal_references": [],
+  "html_files_checked": 14
+}

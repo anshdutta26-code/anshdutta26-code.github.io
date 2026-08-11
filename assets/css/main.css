@@ -883,3 +883,77 @@
     height:60px!important;
   }
 }
+
+
+/* ===== FINAL VISUAL BUILD: approved structure, project links still pending ===== */
+/* Work overview: keep company logos in their normal white-background presentation. */
+.work-card,
+.work-card.compact-card{
+  grid-template-columns:minmax(0,1fr) 150px!important;
+  gap:22px!important;
+  align-items:center!important;
+}
+.work-card.compact-card{grid-template-columns:minmax(0,1fr) 132px!important;}
+.work-logo-tile,
+.compact-card .work-logo-tile{
+  order:2!important;
+  justify-self:end!important;
+  align-self:center!important;
+  width:150px!important;
+  height:112px!important;
+  padding:10px!important;
+  background:#ffffff!important;
+  border:1px solid rgba(255,255,255,.78)!important;
+  border-radius:18px!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.26)!important;
+  overflow:hidden!important;
+}
+.compact-card .work-logo-tile{width:132px!important;height:96px!important;padding:9px!important;}
+.work-logo-tile img,
+.work-card .work-logo-tile img,
+.compact-card .work-logo-tile img{
+  width:100%!important;
+  height:100%!important;
+  padding:0!important;
+  background:#fff!important;
+  border-radius:8px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  filter:none!important;
+}
+
+/* Individual work pages: intentionally no standalone company logo. */
+.experience-hero .company-logo{display:none!important;}
+.experience-hero .company-media{padding-top:0!important;}
+.experience-hero .company-media .media-frame{margin-top:0!important;}
+
+/* Contact: the AD artwork is part of the tile, not a bordered image card. */
+.contact-art-bg{
+  min-height:390px!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background-color:transparent!important;
+  background-image:url('/assets/images/ad-logo-uhd.png')!important;
+  background-size:contain!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  -webkit-mask-image:radial-gradient(ellipse 82% 76% at 50% 50%,#000 54%,rgba(0,0,0,.94) 68%,transparent 100%)!important;
+  mask-image:radial-gradient(ellipse 82% 76% at 50% 50%,#000 54%,rgba(0,0,0,.94) 68%,transparent 100%)!important;
+  opacity:.98!important;
+}
+
+/* Tool labels remain perfectly centered inside their tiles. */
+.tool-tags{justify-content:center!important;align-items:center!important;}
+.tool-tags span{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;}
+
+@media(max-width:900px){
+  .work-card,.work-card.compact-card{grid-template-columns:minmax(0,1fr) 116px!important;gap:16px!important;}
+  .work-logo-tile,.compact-card .work-logo-tile{width:116px!important;height:86px!important;padding:8px!important;}
+  .contact-art-bg{min-height:300px!important;background-size:contain!important;}
+}
+@media(max-width:620px){
+  .work-card,.work-card.compact-card{grid-template-columns:minmax(0,1fr) 90px!important;gap:13px!important;}
+  .work-logo-tile,.compact-card .work-logo-tile{width:90px!important;height:70px!important;padding:6px!important;border-radius:12px!important;}
+  .contact-art-bg{min-height:240px!important;}
+}
