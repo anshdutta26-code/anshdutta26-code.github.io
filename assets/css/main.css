@@ -573,3 +573,313 @@
   .work-card p{font-size:11px!important}
   .work-card small{font-size:10px!important}
 }
+
+
+/* FINAL 2026-08-11 REVISION — user-requested polish */
+/* Contact page uses the approved HD hologram artwork from the PDF/Canva direction. */
+.contact-art-bg{
+  background-image:linear-gradient(135deg,rgba(2,8,23,.08),rgba(2,8,23,.18)),url('/assets/images/contact-ad-hologram.png')!important;
+  background-size:contain!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  background-color:#050f20!important;
+}
+
+/* Tools tile labels centered both horizontally and vertically. */
+.tool-tags span{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  min-height:64px!important;
+  line-height:1.25!important;
+}
+
+/* Work detail pages: keep copy side and image side visually balanced. */
+.experience-hero{
+  align-items:stretch!important;
+}
+.experience-hero .company-copy,
+.experience-hero .company-media{
+  height:100%!important;
+}
+.experience-hero .company-media{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+}
+.experience-hero .company-media .media-frame{
+  flex:1 1 auto!important;
+}
+
+/* AGM proof image: crop to the ranking section only and match tile height with left content. */
+.agm-proof-frame{
+  min-height:0!important;
+  height:100%!important;
+  max-height:540px!important;
+  padding:16px!important;
+}
+.agm-proof-frame>img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:top center!important;
+}
+
+/* Printing Shop: remove the extra floating logo and make the image tile match the text block more closely. */
+.printing-hero .company-media{
+  padding-top:0!important;
+}
+.printing-hero .promo-frame{
+  min-height:0!important;
+  height:100%!important;
+  max-height:560px!important;
+  padding:18px!important;
+  background:linear-gradient(145deg,#071426,#050d1a)!important;
+}
+.printing-hero .promo-frame>img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:transparent!important;
+}
+
+/* FitwithMehar remains the alignment reference on desktop. */
+.fit-hero .dashboard-frame{
+  max-height:560px!important;
+}
+
+@media(max-width:1180px){
+  .tool-tags{grid-template-columns:repeat(6,1fr)!important}
+}
+@media(max-width:900px){
+  .contact-art-bg{background-size:contain!important}
+  .printing-hero .promo-frame{max-height:none!important;height:auto!important}
+  .agm-proof-frame{max-height:none!important;height:auto!important}
+}
+@media(max-width:620px){
+  .tool-tags{grid-template-columns:repeat(2,1fr)!important}
+  .tool-tags span{min-height:56px!important;font-size:10.5px!important}
+}
+
+/* ===== final6 refinements ===== */
+
+/* Blend work-page logos naturally into the dark background. */
+.company-logo{
+  background:transparent!important;
+  border-radius:0!important;
+  padding:0!important;
+  box-shadow:none!important;
+  filter:drop-shadow(0 3px 10px rgba(0,0,0,.28)) drop-shadow(0 1px 1px rgba(255,255,255,.12))!important;
+}
+.company-logo.logo-wide{width:156px!important;height:78px!important}
+.company-logo.logo-tall{width:126px!important;height:96px!important}
+.company-logo.logo-compact{width:126px!important;height:66px!important}
+
+/* Keep hero columns balanced and let media tiles visually match the written content. */
+.company-hero.experience-hero{align-items:stretch!important}
+.company-copy{display:flex!important;flex-direction:column!important}
+.company-media{display:flex!important;flex-direction:column!important}
+.company-media .media-frame{width:100%!important}
+
+/* AGM detail proof should end cleanly at Top Sales Reps and match text-panel height. */
+.agm-proof-section .detail-split{align-items:stretch!important}
+.agm-proof-frame{
+  min-height:0!important;
+  height:100%!important;
+  max-height:430px!important;
+  padding:16px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.agm-proof-frame>img{
+  width:100%!important;
+  height:100%!important;
+  max-height:398px!important;
+  object-fit:contain!important;
+  object-position:top center!important;
+}
+
+/* Printing Shop image should sit fully inside the tile, smaller, with no extra overlay logo. */
+.printing-hero .company-media{justify-content:flex-start!important}
+.printing-hero .promo-frame{
+  min-height:0!important;
+  height:100%!important;
+  max-height:560px!important;
+  padding:20px!important;
+  background:linear-gradient(145deg,#081223,#040a12)!important;
+}
+.printing-hero .promo-frame>img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  max-height:520px!important;
+}
+
+/* Fit proof images remain centred and consistent. */
+.fit-detail .fit-insights{justify-content:stretch!important}
+.fit-detail .fit-insights .media-frame{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.fit-detail .fit-insights .media-frame>img{
+  object-position:top center!important;
+}
+
+/* Contact page should use the same HD hologram-style AD art as the reference PDF. */
+.contact-art-bg{
+  background:#06101d url('/assets/images/contact-ad-hologram.webp') center/contain no-repeat!important;
+  box-shadow:inset 0 0 60px rgba(0,0,0,.18),0 22px 60px rgba(0,0,0,.24)!important;
+}
+
+/* Center the tools grid within the tile. */
+.tools-panel h3{text-align:left!important}
+.tool-tags{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:12px!important;
+}
+.tool-tags span{
+  min-width:146px!important;
+  min-height:64px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:12px 14px!important;
+  text-align:center!important;
+}
+
+@media(max-width:900px){
+  .company-logo.logo-wide{width:132px!important;height:64px!important}
+  .company-logo.logo-tall{width:102px!important;height:78px!important}
+  .company-logo.logo-compact{width:104px!important;height:54px!important}
+  .agm-proof-frame{max-height:none!important;height:auto!important}
+  .agm-proof-frame>img{max-height:none!important;height:auto!important}
+  .tool-tags span{min-width:132px!important;min-height:56px!important}
+}
+
+@media(max-width:620px){
+  .contact-art-bg{background-size:contain!important}
+  .tool-tags{gap:10px!important}
+  .tool-tags span{min-width:calc(50% - 10px)!important;min-height:54px!important}
+}
+
+
+/* ===== final7 github package refinements ===== */
+/* Work directory now matches the approved dark-background logo treatment from the PDF. */
+.work-card,
+.work-card.compact-card{
+  grid-template-columns:minmax(0,1fr) 148px!important;
+  gap:22px!important;
+}
+.work-card.compact-card{grid-template-columns:minmax(0,1fr) 124px!important;}
+.work-card-copy{order:1!important;}
+.work-logo-tile,
+.compact-card .work-logo-tile{
+  order:2!important;
+  justify-self:end!important;
+  align-self:center!important;
+  width:148px!important;
+  height:108px!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+.compact-card .work-logo-tile{
+  width:124px!important;
+  height:92px!important;
+}
+.work-logo-tile img,
+.work-card .work-logo-tile img,
+.compact-card .work-logo-tile img{
+  width:100%!important;
+  height:100%!important;
+  padding:0!important;
+  background:transparent!important;
+  border-radius:0!important;
+  object-fit:contain!important;
+  object-position:center right!important;
+  filter:drop-shadow(0 4px 16px rgba(0,0,0,.32)) drop-shadow(0 1px 1px rgba(255,255,255,.14))!important;
+}
+.work-logo-fit img{filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))!important;}
+.work-logo-inverse img{padding:4px 0!important;}
+.work-logo-printing img{padding:4px 0!important;}
+.work-card h3, .work-card p, .work-card small{max-width:100%!important;}
+.work-card i{right:18px!important;}
+
+/* Keep contact artwork crisp and sized like the Canva/PDF reference. */
+.contact-art-bg{
+  background:#06101d url('/assets/images/contact-ad-hologram.webp') center center / contain no-repeat!important;
+}
+
+/* Equal-height proof section and cleaner AGM crop. */
+.agm-proof-section .detail-split{align-items:stretch!important;}
+.agm-proof-section .rich-copy{height:100%!important;}
+.agm-proof-frame{
+  min-height:100%!important;
+  height:100%!important;
+  max-height:420px!important;
+}
+.agm-proof-frame>img{
+  max-height:388px!important;
+}
+
+/* Printing proof kept slightly smaller so the full poster sits neatly inside the tile. */
+.printing-hero .promo-frame{
+  max-height:540px!important;
+  padding:24px!important;
+}
+.printing-hero .promo-frame>img{
+  max-height:492px!important;
+}
+
+/* Tool chips stay centered inside the tile on every screen size. */
+.tool-tags{justify-content:center!important;}
+.tool-tags span{justify-content:center!important;align-items:center!important;text-align:center!important;}
+
+@media(max-width:900px){
+  .work-card,
+  .work-card.compact-card{
+    grid-template-columns:minmax(0,1fr) 112px!important;
+    gap:18px!important;
+  }
+  .work-logo-tile,
+  .compact-card .work-logo-tile{
+    width:112px!important;
+    height:82px!important;
+  }
+}
+@media(max-width:620px){
+  .work-card,
+  .work-card.compact-card{
+    grid-template-columns:minmax(0,1fr) 88px!important;
+    gap:14px!important;
+    padding:16px!important;
+  }
+  .work-logo-tile,
+  .compact-card .work-logo-tile{
+    width:88px!important;
+    height:68px!important;
+  }
+  .printing-hero .promo-frame{padding:16px!important;}
+}
+@media(max-width:420px){
+  .work-card,
+  .work-card.compact-card{
+    grid-template-columns:minmax(0,1fr) 76px!important;
+    gap:12px!important;
+  }
+  .work-logo-tile,
+  .compact-card .work-logo-tile{
+    width:76px!important;
+    height:60px!important;
+  }
+}
