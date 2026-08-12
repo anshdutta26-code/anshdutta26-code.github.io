@@ -43,3 +43,15 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') setConnectOpen(false); });
   }
 })();
+
+
+// Optional GA4 loader: activate by setting window.PORTFOLIO_CONFIG.gaMeasurementId to your G-XXXXXXXXXX ID.
+(function(){
+  const id=window.PORTFOLIO_CONFIG&&window.PORTFOLIO_CONFIG.gaMeasurementId;
+  if(!id||!/^G-[A-Z0-9]+$/i.test(id)) return;
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=window.gtag||function(){dataLayer.push(arguments)};
+  gtag('js',new Date());
+  gtag('config',id,{anonymize_ip:true});
+  const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(id);document.head.appendChild(s);
+})();

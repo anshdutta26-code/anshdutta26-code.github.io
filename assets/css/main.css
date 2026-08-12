@@ -1384,3 +1384,6 @@ html,body{max-width:100%;overflow-x:hidden}
     height: 420px !important;
   }
 }
+
+/* SEO/performance image delivery */
+picture{max-width:100%}.brand-link picture{width:100%;height:100%;display:flex;align-items:center;justify-content:center}.brand-link picture img{width:auto;height:auto}.hero-portrait picture,.about-portrait picture,.company-media .media-frame picture,.media-frame picture,.project-image picture,.testimonial-card picture{display:block;width:100%;height:100%}.hero-portrait picture img,.about-portrait picture img,.company-media .media-frame picture img,.media-frame picture img,.project-image picture img{width:100%;height:100%}.work-logo-tile picture{display:flex;width:100%;height:100%;align-items:center;justify-content:center}.work-logo-tile picture img{width:100%;height:100%;object-fit:contain}.home-copy .role{line-height:1.2}

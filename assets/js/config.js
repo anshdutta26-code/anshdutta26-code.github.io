@@ -7,4 +7,5 @@ window.PORTFOLIO_CONFIG = {
     infinityFlex: "https://docs.google.com/document/d/1bi4N9sX5fDvvalCqu9h_S0ZFWbegWZmw/preview",
     xboxPlaystation: "https://docs.google.com/document/d/1_0qivU7jjC6TWz6ab5xJh3GzBojKbumR/preview"
   }
+  ,gaMeasurementId: ""
 };

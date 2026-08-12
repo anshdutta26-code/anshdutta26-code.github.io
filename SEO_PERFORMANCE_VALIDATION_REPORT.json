@@ -1,0 +1,17 @@
+{
+  "html_pages": 20,
+  "optimized_images": 34,
+  "optimized_asset_files": 159,
+  "main_css_original_bytes": 79009,
+  "main_css_minified_bytes": 69548,
+  "homepage_structured_data": true,
+  "homepage_keyword_alignment": {
+    "title": "Growth Marketing + Brand Strategy",
+    "meta": "Growth Marketing + Brand Strategy",
+    "heading": "Growth Marketing + Brand Strategy"
+  },
+  "render_blocking_css_strategy": "critical CSS inline + preload/onload full stylesheet",
+  "ga4_status": "loader prepared; Measurement ID required to activate",
+  "cdn_status": "requires external CDN/DNS configuration; cannot be enabled by static files alone",
+  "validation_errors": []
+}

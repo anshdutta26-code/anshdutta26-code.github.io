@@ -1,0 +1,23 @@
+FINAL SEO + PERFORMANCE GITHUB UPLOAD STEPS
+
+1. Download the ZIP and extract it.
+2. Open GitHub Desktop.
+3. Select repository: anshdutta26-code.github.io
+4. Select your live publishing branch: website-build.
+5. Click Fetch origin. If Pull origin appears, click it.
+6. Repository > Show in Explorer.
+7. Copy everything INSIDE the extracted ZIP folder.
+8. Paste into the repository folder and replace existing files.
+9. Return to GitHub Desktop and confirm changed files.
+10. Summary: SEO and performance optimization.
+11. Commit to website-build.
+12. Push origin.
+13. Open GitHub > Actions and wait for the newest Pages deployment to turn green.
+14. Open anshdutta.com and hard refresh with Ctrl + Shift + R.
+15. Re-run PageSpeed / SEO audit after deployment and cache propagation.
+
+GOOGLE ANALYTICS
+A valid GA4 Measurement ID is required (format G-XXXXXXXXXX). The build already contains the loader. Once you create GA4, open assets/js/config.js and place the ID in gaMeasurementId, then commit and push again.
+
+CDN
+A CDN cannot be switched on from HTML/CSS files alone. For a custom-domain GitHub Pages site, use a DNS/CDN provider such as Cloudflare if you want the audit to identify a separate CDN layer.
