@@ -1,0 +1,70 @@
+ANSHDUTTA.COM — FINAL SEO + GITHUB DEPLOYMENT STEPS
+===================================================
+
+PART A — UPLOAD THIS BUILD
+1. Extract this ZIP.
+2. Open GitHub Desktop.
+3. Select repository: anshdutta26-code.github.io
+4. Make sure Current branch = website-build.
+5. Click Fetch origin. If Pull origin appears, click it.
+6. Repository -> Show in Explorer.
+7. Copy everything INSIDE this extracted folder.
+8. Paste into the repository folder and Replace files in destination.
+9. Return to GitHub Desktop and confirm changed files appear.
+10. Summary: Final SEO optimized portfolio
+11. Commit to website-build.
+12. Push origin.
+13. GitHub.com -> repository -> Actions.
+14. Wait for the newest Pages build/deployment on website-build to turn green.
+15. Open https://anshdutta.com and hard refresh (Ctrl+Shift+R).
+
+PART B — GOOGLE SEARCH CONSOLE (DO AFTER SITE IS LIVE)
+1. Open Google Search Console.
+2. Add a Domain property: anshdutta.com
+3. Google will give you a TXT DNS verification value.
+4. In GoDaddy -> DNS -> Add New Record -> Type TXT.
+5. Host/Name: @
+6. Value: paste Google's verification value exactly.
+7. Save, return to Search Console and click Verify. DNS propagation can take time.
+8. In Search Console -> Sitemaps, submit: sitemap.xml
+9. Use URL Inspection and Request Indexing for these first:
+   https://anshdutta.com/
+   https://anshdutta.com/about/
+   https://anshdutta.com/work/
+   https://anshdutta.com/services/
+   https://anshdutta.com/projects/
+   https://anshdutta.com/insights/
+10. The sitemap contains all individual work and project case-study URLs, so Google can discover the rest.
+
+PART C — HELP THE SITE RANK
+1. Put https://anshdutta.com in your LinkedIn Contact info / Featured section and GitHub profile.
+2. Keep your name and professional positioning consistent: Ansh Dutta — Marketing Specialist & Brand Strategist.
+3. Publish useful original content on /insights/ over time. Good topics for this portfolio include:
+   - Order-to-Warehouse Automation with Google Sheets
+   - Retail Sales Dashboard / Management Reporting
+   - GTM Planning for Consumer Brands
+   - E-commerce SEO Audit Checklist
+   - Sales Allowance / TADA Workflow Automation
+4. Link each insight article to the relevant case study and service page.
+5. Do not buy random backlinks or keyword-stuff pages.
+6. In Search Console check Performance monthly: Queries, Impressions, Clicks, CTR and Average Position.
+7. When a page changes materially, update it, keep the sitemap live, and use URL Inspection for important updates.
+
+SEO CHANGES ALREADY BUILT INTO THIS PACKAGE
+- Unique titles and meta descriptions across pages.
+- Canonical URLs.
+- Open Graph + Twitter metadata.
+- Index/follow robot directives.
+- WebSite + Person + ProfilePage + Breadcrumb structured data.
+- Six crawlable HTML project case-study pages on anshdutta.com.
+- Google Drive Viewer buttons remain available as supporting proof.
+- Improved image alt text, image dimensions, loading and decoding hints.
+- Home hero priority hints for performance.
+- Updated sitemap.xml with lastmod dates.
+- robots.txt referencing the sitemap.
+- Project card titles/images link internally to the case-study pages without changing the existing card design.
+
+IMPORTANT
+- Do not change GoDaddy nameservers or existing custom-domain records. Only add the Search Console TXT verification record when Google gives it to you.
+- Search Console verification cannot be pre-filled because Google generates a unique verification token for your account.
+- SEO improvements do not guarantee a specific ranking or ranking date.

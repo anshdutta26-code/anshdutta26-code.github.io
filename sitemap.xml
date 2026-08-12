@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://anshdutta.com/</loc></url>
-  <url><loc>https://anshdutta.com/about/</loc></url>
-  <url><loc>https://anshdutta.com/work/</loc></url>
-  <url><loc>https://anshdutta.com/work/swiss-military/</loc></url>
-  <url><loc>https://anshdutta.com/work/fitwithmehar/</loc></url>
-  <url><loc>https://anshdutta.com/work/agm-advantage/</loc></url>
-  <url><loc>https://anshdutta.com/work/inverse-trends/</loc></url>
-  <url><loc>https://anshdutta.com/work/the-printing-shop/</loc></url>
-  <url><loc>https://anshdutta.com/services/</loc></url>
-  <url><loc>https://anshdutta.com/projects/</loc></url>
-  <url><loc>https://anshdutta.com/testimonials/</loc></url>
-  <url><loc>https://anshdutta.com/insights/</loc></url>
-  <url><loc>https://anshdutta.com/contact/</loc></url>
+  <url><loc>https://anshdutta.com/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://anshdutta.com/about/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/contact/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anshdutta.com/insights/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anshdutta.com/projects/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://anshdutta.com/projects/100-crore-fundraising-readiness/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/projects/infinity-flex-marketing-strategy/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/projects/ontario-science-centre-rebranding/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/projects/order-to-warehouse-automation/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/projects/sales-allowance-automation/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/projects/xbox-vs-playstation-brand-strategy/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/services/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anshdutta.com/testimonials/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anshdutta.com/work/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://anshdutta.com/work/agm-advantage/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anshdutta.com/work/fitwithmehar/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anshdutta.com/work/inverse-trends/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anshdutta.com/work/swiss-military/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anshdutta.com/work/the-printing-shop/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -1,0 +1,26 @@
+GOOGLE-JD ALIGNED PORTFOLIO — GITHUB DESKTOP UPDATE STEPS
+=====================================================
+
+1. Download and extract the final ZIP.
+2. Open GitHub Desktop.
+3. Select repository: anshdutta26-code.github.io
+4. Make sure Current branch is: website-build
+5. Click Fetch origin. If Pull origin appears, click Pull origin too.
+6. Go to Repository -> Show in Explorer.
+7. Open the extracted ZIP folder.
+8. Copy everything INSIDE the extracted folder (not the outer folder itself).
+9. Paste into the repository folder and choose Replace files in destination.
+10. Return to GitHub Desktop and confirm the changed files appear.
+11. Summary: Google JD aligned work experience content
+12. Click Commit to website-build.
+13. Click Push origin.
+14. Go to GitHub.com -> repository -> Actions.
+15. Wait for the newest Pages deployment on website-build to turn green.
+16. Open https://anshdutta.com and press Ctrl + Shift + R.
+17. Check Work page and all five work-profile pages on desktop and mobile.
+
+IMPORTANT
+---------
+- Do not change GoDaddy, DNS, CNAME or the GitHub Pages branch.
+- The content is keyword-aligned to the supplied Google job descriptions, but avoids claiming responsibilities that are not supported by your experience.
+- Your project links, SEO setup, footer, mobile optimization and current visual assets are retained.
