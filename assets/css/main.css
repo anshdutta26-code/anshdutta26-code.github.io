@@ -1181,3 +1181,46 @@ html,body{max-width:100%;overflow-x:hidden}
   .role-capabilities-panel{padding:16px;margin-top:14px}
   .role-capabilities-panel p{font-size:.9rem;line-height:1.55}
 }
+
+
+/* ============================================================
+   AUG 12 FINAL ALIGNMENT + PROJECT OVERVIEW FIXES
+   ============================================================ */
+@media (min-width: 1101px){
+  .fit-hero .company-media,
+  .printing-hero .company-media,
+  .agm-hero .company-media,
+  .swiss-hero .company-media{
+    margin-top:112px !important;
+  }
+  .fit-hero .company-media .media-frame,
+  .printing-hero .company-media .media-frame,
+  .agm-hero .company-media .media-frame,
+  .swiss-hero .company-media .media-frame{
+    min-height:520px !important;
+  }
+}
+
+/* AGM and Swiss hero visuals should feel slightly farther and more portrait-led. */
+.agm-hero .cover-media,
+.swiss-hero .cover-media{
+  background:#07101e !important;
+}
+.agm-hero .cover-media > img,
+.swiss-hero .cover-media > img{
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+
+/* Fit proof screenshots: clean presentation without clipping. */
+.fit-detail .fit-insights .media-frame > img{
+  object-position:top center !important;
+}
+
+/* Project pages: keep them concise and overview-led. */
+.case-content{
+  gap:16px;
+}
+.case-content .case-section p{
+  max-width:100%;
+}

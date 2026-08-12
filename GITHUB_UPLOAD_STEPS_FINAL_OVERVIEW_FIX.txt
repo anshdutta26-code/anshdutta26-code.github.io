@@ -1,0 +1,17 @@
+UPLOAD STEPS
+
+1. Download the final ZIP file.
+2. Extract the ZIP on your computer.
+3. Open GitHub Desktop.
+4. Open your website repository.
+5. Click Repository > Show in Explorer / Finder.
+6. Copy all files from the extracted folder.
+7. Paste them into the repository folder and replace the old files.
+8. Return to GitHub Desktop.
+9. Review the changed files.
+10. In Summary, write: Final work layout and project overview fixes.
+11. Click Commit to main (or your active branch).
+12. Click Push origin.
+13. Wait for GitHub Pages deployment to finish.
+14. Open your website and hard refresh with Ctrl + Shift + R.
+15. Check Work pages, Project pages, mobile and tablet view.
