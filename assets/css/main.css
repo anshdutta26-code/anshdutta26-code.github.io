@@ -1224,3 +1224,163 @@ html,body{max-width:100%;overflow-x:hidden}
 .case-content .case-section p{
   max-width:100%;
 }
+
+
+/* ===== AUG12 FINAL HERO LAYOUT CORRECTIONS ===== */
+@media (min-width: 1101px){
+  /* Prevent right-side hero media from stretching to the full height of long copy columns. */
+  .company-hero.experience-hero{
+    align-items:start !important;
+  }
+  .experience-hero .company-media{
+    display:block !important;
+    height:auto !important;
+    align-self:start !important;
+    margin-top:0 !important;
+  }
+  .experience-hero .company-media .media-frame{
+    flex:none !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+  }
+
+  /* Align hero visuals with the top of the role/intro tile on desktop. */
+  .fit-hero .company-media,
+  .swiss-hero .company-media,
+  .agm-hero .company-media,
+  .printing-hero .company-media,
+  .inverse-hero .company-media{
+    margin-top: 176px !important;
+  }
+
+  /* FitwithMehar */
+  .fit-hero .dashboard-frame{
+    aspect-ratio: 4 / 5 !important;
+    height: 650px !important;
+    max-height: 650px !important;
+    padding: 16px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+  .fit-hero .dashboard-frame > img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center top !important;
+  }
+
+  /* Swiss Military */
+  .swiss-hero .cover-media{
+    aspect-ratio: 4 / 5 !important;
+    height: 650px !important;
+    max-height: 650px !important;
+  }
+  .swiss-hero .cover-media > img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position: 58% center !important;
+  }
+
+  /* AGM hero photo */
+  .agm-hero .cover-media{
+    aspect-ratio: 4 / 5 !important;
+    height: 650px !important;
+    max-height: 650px !important;
+  }
+  .agm-hero .cover-media > img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position: 54% center !important;
+  }
+
+  /* AGM proof image should sit in its own area and never visually merge with hero image. */
+  .agm-proof-section{
+    clear:both !important;
+  }
+  .agm-proof-section .detail-split{
+    grid-template-columns: minmax(0,1.1fr) minmax(360px,.9fr) !important;
+    align-items:start !important;
+  }
+  .agm-proof-frame{
+    aspect-ratio: 4 / 5 !important;
+    height: 520px !important;
+    max-height: 520px !important;
+    min-height: 520px !important;
+    margin-top: 0 !important;
+    align-self:start !important;
+    padding: 14px !important;
+  }
+  .agm-proof-frame > img{
+    width:100% !important;
+    height:100% !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position: top center !important;
+  }
+
+  /* Inverse Trends */
+  .inverse-hero .company-media{
+    justify-content:flex-start !important;
+  }
+  .inverse-hero .media-frame{
+    aspect-ratio: 4 / 3 !important;
+    height: 520px !important;
+    max-height: 520px !important;
+    min-height: 520px !important;
+    padding: 14px !important;
+    background:#0a1322 !important;
+  }
+  .inverse-hero .media-frame > img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+
+  /* Printing Shop */
+  .printing-hero .promo-frame{
+    aspect-ratio: 4 / 5 !important;
+    height: 650px !important;
+    max-height: 650px !important;
+    min-height: 650px !important;
+    padding: 18px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+  .printing-hero .promo-frame > img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px){
+  .fit-hero .company-media,
+  .swiss-hero .company-media,
+  .agm-hero .company-media,
+  .printing-hero .company-media,
+  .inverse-hero .company-media{
+    margin-top: 18px !important;
+  }
+  .fit-hero .dashboard-frame,
+  .swiss-hero .cover-media,
+  .agm-hero .cover-media,
+  .printing-hero .promo-frame{
+    aspect-ratio: 4 / 5 !important;
+    min-height: 500px !important;
+  }
+  .inverse-hero .media-frame{
+    aspect-ratio: 4 / 3 !important;
+    min-height: 420px !important;
+  }
+  .agm-proof-frame{
+    min-height: 420px !important;
+    height: 420px !important;
+  }
+}
