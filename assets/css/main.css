@@ -1702,3 +1702,85 @@ picture{max-width:100%}.brand-link picture{width:100%;height:100%;display:flex;a
     flex:0 0 auto!important;
   }
 }
+
+
+/* ============================================================
+   AUG 14 FINAL — BEYOND THE BRIEF EQUAL MEDIA ALIGNMENT
+   All three desktop cards use the same media block height.
+   Every stacked card is split into two equal image rows.
+   ============================================================ */
+@media (min-width:901px){
+  .insights-grid{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    align-items:stretch!important;
+  }
+  .insights-grid > .insight-card{
+    height:100%!important;
+    min-height:680px!important;
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  .insights-grid > .insight-card > h3{
+    flex:0 0 auto!important;
+  }
+  .insights-grid > .insight-card > .insight-media,
+  .insights-grid > .insight-card > .insight-media.stacked,
+  .insights-grid > .insight-card > .insight-media.single{
+    width:100%!important;
+    height:500px!important;
+    min-height:500px!important;
+    max-height:500px!important;
+    margin:0!important;
+    overflow:hidden!important;
+    background:#040c18!important;
+  }
+  .insights-grid > .insight-card > .insight-media.stacked{
+    display:grid!important;
+    grid-template-rows:minmax(0,1fr) minmax(0,1fr)!important;
+    grid-auto-rows:minmax(0,1fr)!important;
+    gap:8px!important;
+  }
+  .insights-grid > .insight-card > .insight-media.stacked > img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-width:0!important;
+    min-height:0!important;
+    max-width:none!important;
+    max-height:none!important;
+    margin:0!important;
+    padding:0!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+  .insights-grid > .insight-card > p{
+    margin:16px 0 0!important;
+    padding:0!important;
+    flex:0 0 auto!important;
+  }
+}
+
+/* Tablet/mobile: keep each stacked card consistent and prevent stretching. */
+@media (max-width:900px){
+  .insights-grid > .insight-card > .insight-media.stacked{
+    display:grid!important;
+    grid-template-rows:auto auto!important;
+    gap:8px!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:hidden!important;
+  }
+  .insights-grid > .insight-card > .insight-media.stacked > img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    margin:0!important;
+  }
+}

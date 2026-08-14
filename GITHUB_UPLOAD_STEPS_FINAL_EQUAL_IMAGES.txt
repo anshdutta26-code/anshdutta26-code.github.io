@@ -1,0 +1,33 @@
+FINAL GITHUB UPLOAD STEPS — BEYOND THE BRIEF EQUAL IMAGE ALIGNMENT
+
+1. Download the ZIP file.
+2. Extract the ZIP completely.
+3. Open GitHub Desktop.
+4. Select repository: anshdutta26-code.github.io
+5. Confirm Current branch: website-build
+6. Click Fetch origin.
+7. If Pull origin appears, click Pull origin.
+8. Go to Repository > Show in Explorer.
+9. Open the extracted ZIP folder.
+10. Copy EVERYTHING INSIDE the extracted folder — do not copy the outer folder itself.
+11. Paste into your GitHub repository folder.
+12. Choose Replace files in the destination if Windows asks.
+13. Return to GitHub Desktop.
+14. Confirm changed files appear and branch still says website-build.
+15. In Summary enter: Final Beyond the Brief equal image alignment
+16. Click Commit to website-build.
+17. Click Push origin.
+18. Open GitHub.com > repository > Actions.
+19. Wait for the newest Pages deployment on website-build to turn green.
+20. Open anshdutta.com and press Ctrl + Shift + R.
+21. Also open the site once in an Incognito/Private window.
+22. Check Insights > Beyond the Brief on desktop.
+
+WHAT IS FIXED
+- Learning in a New Country keeps both photos.
+- Both photos in the first card are equal height on desktop.
+- All three Beyond the Brief cards use the exact same 500px image block height on desktop.
+- Every two-photo block is split into two equal rows.
+- Cards remain aligned in one straight row.
+- Mobile/tablet behavior remains responsive.
+- CSS version was changed to force browsers to load the new alignment rules instead of cached CSS.
