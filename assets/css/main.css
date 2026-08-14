@@ -1641,3 +1641,64 @@ picture{max-width:100%}.brand-link picture{width:100%;height:100%;display:flex;a
   .printing-hero .printing-primary{aspect-ratio:4/5!important;padding:10px!important}
   .agm-hero .agm-primary,.swiss-hero .swiss-primary{aspect-ratio:4/3!important}
 }
+
+/* ============================================================
+   AUG 14 — BEYOND THE BRIEF DESKTOP ALIGNMENT ONLY
+   Keep the three cards equal height and their photo blocks aligned.
+   Mobile/tablet behavior remains unchanged.
+   ============================================================ */
+@media (min-width:901px){
+  .insights-grid{
+    align-items:stretch!important;
+  }
+  .insight-card{
+    height:100%!important;
+    min-height:680px!important;
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  .insight-card h3{
+    flex:0 0 auto!important;
+  }
+  .insight-media,
+  .insight-media.single,
+  .insight-media.stacked{
+    width:100%!important;
+    height:500px!important;
+    min-height:500px!important;
+    max-height:500px!important;
+    overflow:hidden!important;
+    background:#040c18!important;
+  }
+  .insight-media.single{
+    display:block!important;
+  }
+  .insight-media.single > img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+  .insight-media.stacked{
+    display:grid!important;
+    grid-template-rows:1fr 1fr!important;
+    gap:8px!important;
+  }
+  .insight-media.stacked > img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:transparent!important;
+  }
+  .insight-card p{
+    margin:16px 0 0!important;
+    padding:0!important;
+    flex:0 0 auto!important;
+  }
+}

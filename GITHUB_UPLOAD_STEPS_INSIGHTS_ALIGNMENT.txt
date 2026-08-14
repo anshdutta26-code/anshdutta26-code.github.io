@@ -1,0 +1,23 @@
+GITHUB DESKTOP UPLOAD STEPS
+===========================
+
+1. Download the ZIP file.
+2. Right-click it and choose Extract All.
+3. Open GitHub Desktop.
+4. Select repository: anshdutta26-code.github.io
+5. Confirm Current branch is website-build.
+6. Click Fetch origin. If Pull origin appears, click it too.
+7. Go to Repository -> Show in Explorer.
+8. Open the extracted ZIP folder.
+9. Copy everything INSIDE the extracted folder, not the outer folder itself.
+10. Paste into the repository folder opened by GitHub Desktop.
+11. Choose Replace the files in the destination.
+12. Return to GitHub Desktop and confirm changed files appear.
+13. In Summary enter: Align Beyond the Brief desktop cards
+14. Click Commit to website-build.
+15. Click Push origin.
+16. Open GitHub -> Actions and wait for the latest Pages deployment to turn green.
+17. Open anshdutta.com and press Ctrl + Shift + R.
+18. Check Insights/Beyond the Brief on desktop: all three cards should be the same height and all photo blocks should align in a straight row.
+
+Do not change GoDaddy, DNS, CNAME, or GitHub Pages settings.
