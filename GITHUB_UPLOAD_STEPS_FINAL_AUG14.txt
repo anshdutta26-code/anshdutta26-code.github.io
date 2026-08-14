@@ -1,0 +1,33 @@
+FINAL GITHUB UPLOAD STEPS — AUG 14 DISPLAY FIX
+
+FILE: Ansh_Dutta_Portfolio_FINAL_GITHUB_DISPLAY_MOBILE_FIXED_AUG14.zip
+
+1. Download the ZIP and extract it fully.
+2. Open GitHub Desktop.
+3. Select repository: anshdutta26-code.github.io
+4. Confirm Current branch = website-build (your live publishing branch).
+5. Click Fetch origin. If Pull origin appears, click Pull origin.
+6. Click Repository -> Show in Explorer.
+7. Open the extracted ZIP folder.
+8. Copy everything INSIDE the extracted folder (not the outer folder itself).
+9. Paste into the repository folder and choose Replace files in destination.
+10. Return to GitHub Desktop and confirm changed files are shown.
+11. Summary: Final responsive image and navigation fixes
+12. Click Commit to website-build.
+13. Click Push origin.
+14. Open GitHub -> Actions and wait for the newest Pages deployment to turn green.
+15. Open https://anshdutta.com and hard-refresh with Ctrl + Shift + R.
+16. On iPhone, close the old tab completely and open a fresh Private tab once to avoid cached CSS/images.
+
+CHECK AFTER DEPLOYMENT
+- Testimonials: Rim, Chatty and Mehar photos centered.
+- Insights: Volunteering Journey shows both images fully.
+- FitwithMehar: main dashboard image visible on mobile, not a blank gradient tile.
+- INverse Trends: dashboard image visible in a compact 4:3 mobile tile.
+- Printing Shop: poster visible and fitted in its tile.
+- AGM: hero and proof images separated; no overlap.
+- Swiss Military: product image visible and zoomed appropriately on mobile.
+- Desktop menu: larger, bolder, brighter text.
+- Mobile hamburger menu: larger, bold, high-contrast links.
+- Projects remain overview-only with Google Drive viewer links.
+- SEO structured data, sitemap, responsive WebP assets and performance changes are retained.

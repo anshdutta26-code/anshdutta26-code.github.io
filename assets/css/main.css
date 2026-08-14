@@ -1387,3 +1387,257 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* SEO/performance image delivery */
 picture{max-width:100%}.brand-link picture{width:100%;height:100%;display:flex;align-items:center;justify-content:center}.brand-link picture img{width:auto;height:auto}.hero-portrait picture,.about-portrait picture,.company-media .media-frame picture,.media-frame picture,.project-image picture,.testimonial-card picture{display:block;width:100%;height:100%}.hero-portrait picture img,.about-portrait picture img,.company-media .media-frame picture img,.media-frame picture img,.project-image picture img{width:100%;height:100%}.work-logo-tile picture{display:flex;width:100%;height:100%;align-items:center;justify-content:center}.work-logo-tile picture img{width:100%;height:100%;object-fit:contain}.home-copy .role{line-height:1.2}
+
+
+/* ============================================================
+   AUG 14 DISPLAY STABILITY + RESPONSIVE FINAL FIX
+   - reliable WebP image rendering on Safari/mobile
+   - centered testimonials
+   - clearer navigation
+   - no blank work-media panels
+   - clean volunteering image stack
+   ============================================================ */
+
+/* Navigation readability */
+@media (min-width:1181px){
+  .site-nav{gap:26px!important}
+  .site-nav a{
+    font-size:13.5px!important;
+    font-weight:750!important;
+    color:#c9d5e5!important;
+    letter-spacing:.01em!important;
+  }
+  .site-nav a:hover,.site-nav a.active{color:#ffffff!important}
+}
+@media (min-width:901px) and (max-width:1180px){
+  .site-nav{gap:14px!important}
+  .site-nav a{
+    font-size:12.3px!important;
+    font-weight:750!important;
+    color:#c3d0e1!important;
+  }
+  .site-nav a:hover,.site-nav a.active{color:#ffffff!important}
+}
+@media (max-width:900px){
+  .menu-btn{
+    width:50px!important;height:46px!important;
+    border-color:#3978b9!important;
+    background:#07182a!important;
+  }
+  .menu-btn span{height:2px!important;background:#f1f6fc!important;border-radius:2px!important}
+  .mobile-menu{
+    background:#07172a!important;
+    border-color:#2d6da8!important;
+    box-shadow:0 18px 54px rgba(0,0,0,.48)!important;
+  }
+  .mobile-menu a{
+    padding:13px 14px!important;
+    font-size:15px!important;
+    line-height:1.25!important;
+    font-weight:750!important;
+    color:#e6eef8!important;
+  }
+  .mobile-menu a:hover,.mobile-menu a.active{background:#0b2440!important;color:#ffffff!important}
+}
+
+/* Testimonials: every portrait is centered consistently, including Safari/mobile. */
+.testimonial-card{align-items:stretch!important}
+.testimonial-card > img{
+  display:block!important;
+  width:132px!important;
+  height:132px!important;
+  min-width:132px!important;
+  min-height:132px!important;
+  margin:0 auto 24px!important;
+  align-self:center!important;
+  justify-self:center!important;
+  object-fit:cover!important;
+  object-position:center top!important;
+  border-radius:50%!important;
+}
+.testimonial-card blockquote{width:100%!important}
+@media(max-width:620px){
+  .testimonial-card > img{
+    width:124px!important;height:124px!important;
+    min-width:124px!important;min-height:124px!important;
+    margin:0 auto 20px!important;
+  }
+}
+
+/* Volunteering card: show both images completely instead of cropping the second image. */
+.insight-media.stacked{
+  height:auto!important;
+  min-height:0!important;
+  grid-template-rows:auto auto!important;
+  gap:10px!important;
+  overflow:visible!important;
+  background:transparent!important;
+}
+.insight-media.stacked > img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#ffffff!important;
+}
+.insight-card:has(.insight-media.stacked){min-height:0!important}
+
+/* Reliable work hero media: the WebP image must sit above decorative pseudo backgrounds. */
+.experience-hero .company-media .media-frame > img{
+  position:relative!important;
+  z-index:3!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+.experience-hero .visual-fit > img{
+  display:block!important;
+  position:relative!important;
+  z-index:3!important;
+}
+
+/* Desktop alignment kept consistent with the role/cue-card line. */
+@media(min-width:1101px){
+  .fit-hero .company-media,
+  .swiss-hero .company-media,
+  .agm-hero .company-media,
+  .printing-hero .company-media,
+  .inverse-hero .company-media{
+    margin-top:176px!important;
+  }
+
+  .fit-hero .dashboard-frame,
+  .swiss-hero .cover-media,
+  .agm-hero .cover-media,
+  .printing-hero .promo-frame{
+    height:650px!important;
+    min-height:650px!important;
+    max-height:650px!important;
+  }
+  .inverse-hero .media-frame{
+    height:520px!important;
+    min-height:520px!important;
+    max-height:520px!important;
+  }
+}
+
+/* Tablet/mobile work visuals: no huge empty or gradient-only panels. */
+@media(max-width:900px){
+  .company-hero.experience-hero{grid-template-columns:1fr!important;gap:20px!important}
+  .experience-hero .company-media{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    margin:18px 0 0!important;
+    padding:0!important;
+  }
+  .experience-hero .company-media .media-frame{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+    overflow:hidden!important;
+  }
+
+  /* FitwithMehar dashboard */
+  .fit-hero .fit-primary{
+    aspect-ratio:9/10!important;
+    min-height:0!important;
+    padding:12px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .fit-hero .fit-primary > img{
+    width:94%!important;
+    height:94%!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    border-radius:14px!important;
+  }
+
+  /* INverse Trends */
+  .inverse-hero .inverse-primary{
+    aspect-ratio:4/3!important;
+    min-height:0!important;
+    padding:12px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .inverse-hero .inverse-primary > img{
+    width:96%!important;
+    height:96%!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    border-radius:12px!important;
+  }
+
+  /* Printing Shop */
+  .printing-hero .printing-primary{
+    aspect-ratio:4/5!important;
+    min-height:0!important;
+    padding:12px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .printing-hero .printing-primary > img{
+    width:94%!important;
+    height:94%!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+
+  /* AGM and Swiss: crop the portrait composite closer so the actual photo is large and clear. */
+  .agm-hero .agm-primary,
+  .swiss-hero .swiss-primary{
+    aspect-ratio:4/3!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:0!important;
+  }
+  .agm-hero .agm-primary > img,
+  .swiss-hero .swiss-primary > img{
+    position:static!important;
+    width:100%!important;
+    height:100%!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:center!important;
+  }
+
+  /* AGM proof must remain separate from the hero image. */
+  .agm-proof-section{clear:both!important;margin-top:34px!important;position:relative!important;z-index:1!important}
+  .agm-proof-section .detail-split{grid-template-columns:1fr!important;gap:20px!important}
+  .agm-proof-frame{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    margin:0!important;
+    padding:12px!important;
+  }
+  .agm-proof-frame > img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:top center!important;
+  }
+}
+
+@media(max-width:620px){
+  .experience-hero .company-media{margin-top:14px!important}
+  .fit-hero .fit-primary{aspect-ratio:9/11!important;padding:10px!important}
+  .inverse-hero .inverse-primary{aspect-ratio:4/3!important;padding:10px!important}
+  .printing-hero .printing-primary{aspect-ratio:4/5!important;padding:10px!important}
+  .agm-hero .agm-primary,.swiss-hero .swiss-primary{aspect-ratio:4/3!important}
+}

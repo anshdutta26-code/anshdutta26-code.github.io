@@ -1,0 +1,16 @@
+{
+  "html_pages": 20,
+  "picture_elements_remaining": 0,
+  "pictures_unwrapped": 33,
+  "missing_internal_references": 0,
+  "missing_reference_examples": [],
+  "key_fixes": [
+    "WebP images rendered directly without picture wrapper conflicts",
+    "Work hero images eager-loaded",
+    "Testimonials centered",
+    "Volunteering stacked images fully visible",
+    "Desktop and mobile navigation contrast increased",
+    "Fit/Inverse/Printing/AGM/Swiss mobile media sizing fixed",
+    "AGM hero/proof separation enforced"
+  ]
+}
