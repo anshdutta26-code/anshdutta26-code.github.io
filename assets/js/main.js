@@ -2,6 +2,22 @@
   const body = document.body;
   const btn = document.querySelector('.menu-btn');
   const menu = document.querySelector('.mobile-menu');
+
+  // Keep the Blogs section visible in the primary navigation across legacy pages
+  // without forcing a markup rewrite on every existing page.
+  const ensureBlogsLink = (nav) => {
+    if (!nav || nav.querySelector('a[href="/blogs/"]')) return;
+    const link = document.createElement('a');
+    link.href = '/blogs/';
+    link.textContent = 'Blogs';
+    if (window.location.pathname.startsWith('/blogs/')) link.classList.add('active');
+    const contact = nav.querySelector('a[href="/contact/"]');
+    if (contact) nav.insertBefore(link, contact);
+    else nav.appendChild(link);
+  };
+  ensureBlogsLink(document.querySelector('.site-nav'));
+  ensureBlogsLink(menu);
+
   if (btn && menu) {
     btn.addEventListener('click', () => {
       const open = body.classList.toggle('menu-open');
@@ -43,7 +59,6 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') setConnectOpen(false); });
   }
 })();
-
 
 // Optional GA4 loader: activate by setting window.PORTFOLIO_CONFIG.gaMeasurementId to your G-XXXXXXXXXX ID.
 (function(){
